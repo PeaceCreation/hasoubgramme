@@ -28,7 +28,7 @@ class UserFactory extends Factory
         return [
             'name' => $name,
             'username' => $this->faker->userName(),
-            'description' => $this->faker->sentence(),
+            // 'description' => $this->faker->sentence(),
             'bio' => $this->faker->sentence(),
             'image' => 'https://ui-avatars.com/api/?name=' . urlencode($name),
             'email' => fake()->unique()->safeEmail(),

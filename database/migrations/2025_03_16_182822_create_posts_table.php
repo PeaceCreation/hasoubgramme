@@ -16,12 +16,11 @@ return new class extends Migration
             $table->string('image');
             $table->string('description');
             $table->string('slug');
-            $table->integer('likes');
+            $table->integer('likes')->default(0);
             $table->timestamps();
-
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-
+            $table->foreignId('user_id')->nullable()->constrained()->cascadeOnDelete(); // Make user_id nullable
         });
+
     }
 
     /**
